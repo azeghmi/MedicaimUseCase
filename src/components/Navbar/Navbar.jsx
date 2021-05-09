@@ -36,7 +36,7 @@ const PrimarySearchAppBar = ({ totalItems }) => {
     setCart(await commerce.cart.retrieve());
   };
 
-  const handleClickOpen = () => setOpen(true);
+  const handleClickOpen = () => { fetchCart(); setOpen(true); };
 
   const handleClose = () => setOpen(false);
 

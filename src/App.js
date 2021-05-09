@@ -36,7 +36,7 @@ const App = () => {
         <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
         <Switch>
           <Route exact path="/">
-            <Products products={products} onAddToCart={handleAddToCart} handleUpdateCartQty onClick={useState()[1]} />
+            <Products products={products} onAddToCart={handleAddToCart} handleUpdateCartQty />
           </Route>
         </Switch>
       </div>
