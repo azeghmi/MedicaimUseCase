@@ -13,7 +13,7 @@ export default makeStyles((theme) => ({
       marginBottom: '20px',
     },
     [theme.breakpoints.up('xs')]: {
-      marginRight: '20px',
+      marginRight: '40px',
     },
   },
   link: {

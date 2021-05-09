@@ -11,8 +11,8 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
   const handleEmptyCart = () => onEmptyCart();
 
   const renderEmptyCart = () => (
-    <Typography variant="subtitle1">Panier vide
-      <Link className={classes.link} to="/" />
+    <Typography variant="subtitle1">Panier vide,
+      <Link className={classes.link} to="/"> Cliquez pour ajouter un article</Link>
     </Typography>
   );
 

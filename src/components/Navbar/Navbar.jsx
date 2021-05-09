@@ -42,7 +42,6 @@ const PrimarySearchAppBar = ({ totalItems }) => {
 
   const handleUpdateCartQty = async (lineItemId, quantity) => {
     const response = await commerce.cart.update(lineItemId, { quantity });
-
     // eslint-disable-next-line no-use-before-define
     setCart(response.cart);
   };
@@ -50,11 +49,11 @@ const PrimarySearchAppBar = ({ totalItems }) => {
 
   useEffect(() => {
     fetchCart();
+    setOpen(true);
   }, []);
 
   const handleRemoveFromCart = async (lineItemId) => {
     const response = await commerce.cart.remove(lineItemId);
-
     setCart(response.cart);
   };
 
@@ -74,9 +73,6 @@ const PrimarySearchAppBar = ({ totalItems }) => {
         </IconButton>
         <p>Cart</p>
       </MenuItem>
-      <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-        <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
-      </Dialog>
     </Menu>
   );
 

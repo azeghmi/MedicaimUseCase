@@ -8,7 +8,6 @@ const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
-
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
     setProducts(data);
@@ -37,7 +36,7 @@ const App = () => {
         <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
         <Switch>
           <Route exact path="/">
-            <Products products={products} onAddToCart={handleAddToCart} handleUpdateCartQty />
+            <Products products={products} onAddToCart={handleAddToCart} handleUpdateCartQty onClick={useState()[1]} />
           </Route>
         </Switch>
       </div>
